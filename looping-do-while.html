@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping dengan Do While</title>
+</head>
+<body>
+    <h1>Looping dengan Do While</h1>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        let kata = prompt("Masukkan tulisan: ");
+        // number ==> mengkonversi ke tipe data number
+        let jumlah = Number(prompt("Mau diulang berapa kali?: "));
+
+        console.log(kata, jumlah);
+        console.log(typeof kata, typeof jumlah);
+
+        /*
+            sintaks:
+            let namavariabel = nilai_awal;
+            do {
+                ...
+                namavariabel++;
+            }
+            while (namavariabel < nilai_akhir);
+        */
+
+        let tampungan = '';
+        let i = 0;
+        do {
+            tampungan = tampungan + `${kata} <br/>`;
+            i++;
+        }
+        while(i < jumlah);
+
+        document.querySelector('#hasil').innerHTML = tampungan;
+
+    </script>
+
+
+</body>
+</html>

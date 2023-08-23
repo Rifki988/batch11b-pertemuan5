@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+
+    <style>
+        table tr:nth-child(3) td:nth-child(1), table tr:nth-child(3) td:nth-child(2) {
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Object</h1>
+
+    <table>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td id="nama"></td>
+        </tr>
+        <tr>
+            <td>Kebangsaan</td>
+            <td>:</td>
+            <td id="nationality"></td>
+        </tr>
+        <tr>
+            <td>History Klub</td>
+            <td>:</td>
+            <td id="club-history"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        /* 
+            object ==> 
+
+            // deklarasi 
+
+            let namavariabel = {
+                property1: value1,
+                ...,
+                propertyN: valueN
+            };
+        */
+
+        let player1 = {
+            name: 'Cristiano Ronaldo',
+            nationality: 'Portugal',
+            club_history: [
+                'Manchester United',
+                'Real Madrid',
+                'Al-Nassr'
+            ],
+            salary: 999999999,
+            is_active: true,
+            date_of_birth: '1980-01-01',
+            ovr: 117
+        };
+
+        console.log(player1);
+
+        // mengakses / menampilkan nationality
+        // namavariabel.namaproperty
+        console.log(player1.nationality);
+        console.log(player1.club_history);
+
+        document.querySelector('#nama').innerHTML = player1.name;
+        document.querySelector('#nationality').innerHTML = player1.nationality;
+
+        let club = "";
+        (player1.club_history).forEach((el, key) => {
+            club += "(" + (Number(key) + 1) + "). " + el + "<br/>";
+        });
+
+        // console.log(club);
+        document.getElementById("club-history").innerHTML = club;
+
+
+    </script>
+
+</body>
+</html>

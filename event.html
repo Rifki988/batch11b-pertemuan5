@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>Event</h1>
+
+    <div id="hasil"></div>
+
+    <button onclick="tampilkan_nama_dinamis('Rizki..');">Tampilkan Halo</button>
+    <button id="btn-hide">Sembunyikan Halo</button>
+
+    <script>
+
+        function tampilkan_nama_dinamis (nama) 
+        {
+            document.getElementById('hasil').style.display = 'block';
+            document.querySelector('#hasil').innerHTML = `Halo ${nama}! Welcome to the club!`;
+        }
+
+        function sembunyikan_nama_dinamis () {
+            document.getElementById('hasil').style.display = 'none';
+        }
+
+        // menambahkan event click ke btn-hide
+        document.getElementById('btn-hide').addEventListener('click', sembunyikan_nama_dinamis);
+        
+    </script>
+
+</body>
+</html>

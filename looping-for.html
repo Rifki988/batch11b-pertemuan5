@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping dengan For</title>
+</head>
+<body>
+    <h1>Looping dengan For</h1>
+
+    <div id="hasil"></div>
+
+    <script>
+
+        let kata = prompt("Masukkan tulisan: ");
+        // number ==> mengkonversi ke tipe data number
+        let jumlah = Number(prompt("Mau diulang berapa kali?: "));
+
+        console.log(kata, jumlah);
+        console.log(typeof kata, typeof jumlah);
+
+        /*
+            sintaks:
+            for (let namavariabel = nilai_awal; namavariabel < nilai_akhir; namavariabel++) {
+                ...
+            }
+        */
+
+        let tampungan = '';
+        for (let i = 1; i <= jumlah; i++) {
+            tampungan = tampungan + `${kata} <br/>`;
+        }
+
+        document.querySelector('#hasil').innerHTML = tampungan;
+
+    </script>
+
+
+</body>
+</html>

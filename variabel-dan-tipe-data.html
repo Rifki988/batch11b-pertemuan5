@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel</title>
+</head>
+<body>
+    
+    <h1>Variabel</h1>
+
+    <div id="nama"></div>
+    <div id="lokasi"></div>
+    <div id="angka-pertama"></div>
+    <div id="angka-kedua"></div>
+    <div id="hasil-penjumlahan"></div>
+    <div id="boolean"></div>
+
+
+    <script>
+        /*
+            variabel => wadah / tempat penyimpanan 
+
+            membuat variabel / deklarasi variabel 
+            1. var      ==> old ways 
+            2. let      ==> menyimpan data yang nilainya berubah-ubah
+            3. const    ==> menyimpan data yang nilainya tetap / konstan / tidak bisa diubah
+
+            javascript, tidak menyebutkan tipe data secara eksplisit / terang-terangan, tapi bergantung dengan nilai yang diberikan 
+
+            contoh:
+              let nama = "..."; ==> string ==> "teks / karakter / kalimat"
+              let angka = 3;    ==> number (integer) ==> bilangan bulat
+              let pecahan = 10.25;  ==> number (floating point / float) ==> bilangan desimal / pecahan / koma
+              let status = true;    ==> boolean ==> benar atau salah ==> true / false 
+              let data = [1, 2, 3];     ==> array 
+
+            aturan penulisan nama variabel 
+            - karakter pertama harus pakai huruf / simbol tertentu (kecuali simbol @, #, dll)
+            - tidak menggunakan spasi, (harus menggunakan tanda pisah kalau lebih dari 1 kata)
+        */
+
+       // deklarasi dan assignment / pemberian nilai ke variabel
+       var nama = "Workshop 4 Days"; // string
+        var lokasi = "Online"; // string
+        var angka_pertama = 4; // number (integer) // snake case
+        let angkaKedua = 35.421; // number (float)    // camel case
+        let status = false; // boolean 
+        
+        
+        // error
+        // var #3asdfds = "a"; let 4angka = "asd";
+        /* 
+            var nama = "...", 
+                lokasi = "...";
+        */
+
+        document.getElementById("nama").innerHTML = nama;
+        document.getElementById("lokasi").innerHTML = lokasi;
+        document.getElementById("angka-pertama").innerHTML = angka_pertama;
+        document.getElementById("angka-kedua").innerHTML = angkaKedua;
+
+        document.getElementById("hasil-penjumlahan").innerHTML = 35 - (4 * 10) / 2.5;
+
+        document.getElementById('boolean').innerHTML = status;
+
+        console.log('var nama: ' + nama + ' - ' + typeof nama);
+        console.log('let status: ' + status + ' - ' + typeof status);
+
+        console.log(status);
+        console.log(angka_pertama);
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h1>Function / Fungsi</h1>
+
+    <div id="hasil-1"></div>
+    <div id="hasil-2"></div>
+
+    <script>
+
+        /*
+            prosedur / void     ==> tidak mengembalikan nilai
+            function            ==> mengembalikan nilai         ==> return 
+        
+            deklarasi function :
+            function namafungsi(parameter_jika_ada) {
+                // isi fungsi 
+                return '...';
+            }
+
+            memanggil fungsi:
+                namafungsi(parameter_jika_ada);
+        */
+
+        // deklarasi fungsi tanpa parameter
+        function tampilkan_nama_statis () {
+            return "Hacktiv8 Front-End Web Development";
+        }
+        
+        // deklarasi fungsi dengan parameter
+        function tampilkan_nama_dinamis (nama) 
+        {
+            return `Halo ${nama}! Welcome to the club!`;
+        }
+
+
+        document.getElementById('hasil-1').innerHTML = tampilkan_nama_statis();
+        
+        document.querySelector('#hasil-2').innerHTML = tampilkan_nama_dinamis("Rizki Cahyana");
+
+        
+
+    </script>
+
+</body>
+</html>

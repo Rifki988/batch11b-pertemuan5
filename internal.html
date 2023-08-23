@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penulisan JS Internal</title>
+
+    <!-- 
+        internal / external javascript => bisa di dalam tag head atau body
+    -->
+
+    <!-- external javascript -->
+    <script src="latihan.js"></script>
+
+    <script>
+        /*
+            console.log ==> menampilkan / mencetak tulisan ke dalam console browser (Dev Tools)
+
+            alert ==> menampilkan popup 
+            document.write atau document.writeln ==> menampilkan tulisan ke body browser
+        */
+        console.log("Halo from javascript di tag head..");
+    </script>
+
+</head>
+<body>
+    Ini ditulis dari HTML.. <br/>
+
+    <script>
+        console.log("Halo dari tag body..");
+
+        // alert("Halo dari Hacktiv8!");
+
+        document.write("Halo.. ini ditulis dari Javascript.. ");
+    </script>
+
+</body>
+</html>
